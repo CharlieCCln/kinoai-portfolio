@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>OpenKinoAI - Présentation</title>
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
+</head>
+<body>
+	<main>
+		<div class="row" id="title-row">
+			<span id="title">OPENKINOAI</span>
+			<span id="subtitle">Organiser les répétitions théâtrales grâce à l'intelligence artificielle</span>
+		</div>
+		<div class="content-row" id="content-row-1">
+			<div class="row" id="sketch"></div>
+			<div class="row" id="wireframe"></div>
+			<div class="row" id="interface"></div>
+		</div>
+		<div class="content-row" id="content-row-2">
+			<div class="row" id="text-1">
+				<span class="text-title">Clarifier l'interface pour clarifier l'usage</span>
+				<p class="text" id="text-1-text-1">OpenKinoAI est une WebApp développée par Inria Grenoble et dirigée par Rémi Ronfard. Elle permet aux compagnies de théâtre filmant leurs répétitions de monter et annoter leurs prestations. Grâce à un service appelé OpenPose, les utilisateurs peuvent suivre l'acteur de leur choix.</p>
+				<p class="text" id="text-1-text-2">J'ai voulu, grâce à une refonte complète de l'interface, repenser le parcours utilisateur en clarifiant les différentes parties grâce à une grille marquée : tous les paramètres sont à droite, divisés selon les cinq étapes d'édition. La timeline, située sous la vidéo, s'adapte en fonction des parties.</p>
+			</div>
+			<div class="row" id="buttons">
+				<div id="tabs">
+					<ul>
+						<li><a href="#preset">Preset scene</a></li>
+						<li><a href="#custom">Custom scene</a></li>
+					</ul>
+					<div id="preset">
+						<div class="half-row">
+							<select class="selectmenu" id="frame">
+								<option value="video" id="original-frame" selected>Frame</option>
+								<option value="bcu" id="bcu">BCU</option>
+								<option value="cu" id="cu">CU</option>
+								<option value="mcu" id="mcu">MCU</option>
+								<option value="ms" id="ms">MS</option>
+								<option value="mls" id="mls">MLS</option>
+								<option value="fs" id="fs">FS</option>
+							</select>
+							<select class="selectmenu" id="ratio">
+								<option value="original-ratio" id="original-ratio" selected>Original</option>
+								<option value="half" id="half">1/2 Width</option>
+								<option value="twice" id="twice">2 * Width</option>
+								<option value="43" id="43">4:3</option>
+								<option value="169" id="169">16:9</option>
+								<option value="4k2k" id="4k2k">4K - 2K</option>
+							</select>
+						</div>
+						<div class="toggles">
+							<div class="toggles-left">
+								<div class="toggle-row">
+									<div class="toggle" id="keep-out"></div>
+									<span>Keep out</span>
+								</div>
+								<div class="toggle-row">
+									<div class="toggle" id="pull-in"></div>
+									<span>Pull in</span>
+								</div>
+							</div>
+							<div class="toggles-right">
+								<div class="toggle-row">
+									<div class="toggle" id="gaze-direction"></div>
+									<span>Gaze direction</span>
+								</div>
+								<div class="toggle-row">
+									<div class="toggle" id="stage-position"></div>
+									<span>Stage position</span>
+								</div>
+							</div>
+						</div>
+
+						<div id="create-scene">Create scene</div>
+					</div>
+					<div id="custom">
+						<div class="selected-actors">Selected actors...</div>
+						<div class="half-row">
+							<div id="create">Create</div>
+							<div id="cancel">Cancel</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="video">
+				<div class="video">
+					<div class="videobar"></div>
+				</div>
+			</div>
+		</div>
+		<div class="content-row" id="content-row-3">
+				<div class="row" id="video-row">
+					<video autoplay muted loop id="demo">
+						<source src="./assets/demo.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="row" id="text-2">
+					<span class="text-title">Actualiser l'interface pour la rendre plus attractive</span>
+					<p class="text" id="text-2-text-1">J'ai pour ma part travaillé sur la partie "framing", un assistant de création des différents cadrages. On peut y choisir ses acteurs en cliquant sur leurs tracklets puis créer des "scènes" en décidant du cadrage, de l'aspect ratio et de différents paramètres. Essayez de jouer avec le sélecteur de ratio !</p>
+					<p class="text" id="text-2-text-2">Grâce à une gamme colorée claire et contrastée, l'utilisateur repère rapidement les différentes options, dont les icônes ont été repensées. Le bouton toggle a remplacé la checkbox, et les menu select ont été stylisés pour mieux correspondre à l'interface. De plus, certaines micro-interactions ont été ajoutées, comme la possibilité de "drop" la vidéo dans la timeline pour créer une scène.</p>
+				</div>
+			</div>
+		</main>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="js/scripts.js" charset="utf-8"></script>
+		<script src="https://kit.fontawesome.com/d93ad5190c.js" crossorigin="anonymous"></script>
+	</body>
+
+	</html>
